@@ -1,0 +1,26 @@
+# gate-check.conf  —  프로젝트 루트에 두면 자동으로 읽힙니다.
+# 필요한 줄만 주석 해제해서 쓰세요. (쉘 변수 형식)
+
+# --- 명령 직접 지정 (비워두면 스택 자동 감지) ---
+# BUILD_CMD="pnpm build"
+# TEST_CMD="pnpm vitest run"
+# LINT_CMD="pnpm eslint . --max-warnings=0"
+
+# --- 킷 파일 경로 ---
+# STATUS_FILE="STATUS.md"
+# DOCS_DIR="docs"
+
+# --- STATUS.md 필수 항목 ---
+# STATUS_REQUIRED=("현재 게이트" "마지막 작업" "다음 할 일" "담당 AI" "차단 요인")
+
+# --- docs/*.md 필수 섹션 (docs/_templates 는 검사 제외) ---
+# DOC_REQUIRED=("## 목표" "## 범위" "## 완료 조건")
+
+# --- 커밋 메시지 허용 타입 ---
+# COMMIT_PREFIXES="feat|fix|docs|refactor|test|chore|build|perf"
+
+# --- STATUS.md 가 최근 몇 커밋 안에 갱신됐어야 하는지 ---
+# STATUS_MAX_AGE_COMMITS=1
+
+# --- 외부 도구 위임 끄기 ---
+# DELEGATE=0
