@@ -1,0 +1,25 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 실행 권한 부여
+        run: chmod +x *.sh
+
+      - name: 문법 검사
+        run: for f in *.sh; do bash -n "$f"; done
+
+      - name: 자동 테스트
+        run: |
+          git config --global user.email "ci@example.com"
+          git config --global user.name "ci"
+          git config --global init.defaultBranch main
+          bash test.sh
