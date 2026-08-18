@@ -1,0 +1,16 @@
+# dashboard.conf — 관제탑 집계 설정
+
+# 방법 A: 프로젝트를 명시 (권장 — 스캔보다 빠르고 정확)
+# PROJECTS=(
+#   "$HOME/dev/msbs-invest"
+#   "$HOME/dev/another-project"
+# )
+
+# 방법 B: 디렉터리 자동 스캔 (PROJECTS 가 비어 있을 때만 동작)
+SCAN_DIR="$HOME/dev"
+
+OUT="DASHBOARD.md"
+
+# 판정 임계값 (마지막 커밋 경과일)
+WARN_DAYS=7
+DANGER_DAYS=14
